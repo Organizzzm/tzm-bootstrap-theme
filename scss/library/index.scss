@@ -1,0 +1,22 @@
+body {
+  padding-top: 120px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-header{
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.bs-docs-section{
+  margin-bottom: 5rem;
+}
+
+.modal-btn{
+  width: 40px;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: -50px;
+}
