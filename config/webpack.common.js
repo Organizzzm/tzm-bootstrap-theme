@@ -1,14 +1,29 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const path = require('path');
 
 module.exports = {
-    entry: __dirname + '/src/index.js',
+    entry: {
+        library: './src/library/scripts/index.js'
+    },
     output: {
-        path: __dirname + '/dist',
-        filename: '[name].js'
+        path: path.resolve(__dirname, '..', 'dist'),
+        filename: '[name].js',
+        sourceMapFilename: '[name].map'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.pug$/,
+                loader: "pug-loader"
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: __dirname + '/src/index.html'
-        })
+            template: './src/library/index.pug',
+            filename: 'index.html'
+        }),
+        new WebpackCleanupPlugin('./dist', {})
     ]
 };
