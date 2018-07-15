@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Custom built theme - This already includes Bootstrap 4 -->
-    <link rel="stylesheet" href="css/mytheme.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/tzm-theme.css">
+    <link rel="stylesheet" href="vendors/prism.css">
 </head>
 <body>
-<div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+<div class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a href="../" class="navbar-brand">TZM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -24,8 +24,9 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Download<span
                             class="caret"></span></a>
                     <div class="dropdown-menu" aria-labelledby="themes">
-                        <a class="dropdown-item" href="../default/">_tzm-theme.scss</a>
+                        <a class="dropdown-item" href="css/tzm-theme.min.css">_tzm-theme.min.scss</a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="css/tzm-theme.css">_tzm-theme.scss</a>g
                     </div>
                 </li>
             </ul>
@@ -36,15 +37,14 @@
 
 <div class="container">
     <!-- Navbar -->
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="bs-docs-section">
-                <div class="page-header">
-                    <h1 id="navbars">Navbar</h1>
-                </div>
-
+    <div class="bs-docs-section">
+        <div class="page-header">
+            <h1 id="navbar">Navbar</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
                 <div class="tzm-component">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="#">Navbar</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,6 @@
                             </form>
                         </div>
                     </nav>
-                    <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
                 </div>
             </div>
         </div>
@@ -122,61 +121,61 @@
                     <button type="button" class="btn btn-outline-danger">Danger</button>
                 </p>
 
-                <div class="bs-component">
-                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <button type="button" class="btn btn-primary">Primary</button>
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <button type="button" class="btn btn-success">Success</button>
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <button type="button" class="btn btn-info">Info</button>
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <button type="button" class="btn btn-danger">Danger</button>
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                                <a class="dropdown-item" href="#">Dropdown link</a>
-                            </div>
+                <p class="bs-component">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bs-component">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-success">Success</button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-info">Info</button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                </div>
+                </p>
+
+                <p class="bs-component">
                     <button type="button" class="btn btn-primary btn-lg">Large button</button>
                     <button type="button" class="btn btn-primary">Default button</button>
                     <button type="button" class="btn btn-primary btn-sm">Small button</button>
-                </div>
+                </p>
 
             </div>
             <div class="col-lg-5">
@@ -185,71 +184,71 @@
                     <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
                 </p>
 
-                <div class="bs-component" style="margin-bottom: 15px;">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-primary active">
-                            <input type="checkbox" checked="" autocomplete="off"> Active
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="checkbox" autocomplete="off"> Check
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="checkbox" autocomplete="off"> Check
-                        </label>
-                    </div>
+                <p class="bs-component" style="margin-bottom: 15px;">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="checkbox" checked="" autocomplete="off"> Active
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" autocomplete="off"> Check
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" autocomplete="off"> Check
+                    </label>
                 </div>
+                </p>
 
-                <div class="bs-component" style="margin-bottom: 15px;">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-primary active">
-                            <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Active
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-                        </label>
-                    </div>
+                <p class="bs-component" style="margin-bottom: 15px;">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Active
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                    </label>
                 </div>
+                </p>
 
-                <div class="bs-component">
-                    <div class="btn-group-vertical" data-toggle="buttons">
-                        <button type="button" class="btn btn-primary">Button</button>
-                        <button type="button" class="btn btn-primary">Button</button>
-                        <button type="button" class="btn btn-primary">Button</button>
-                        <button type="button" class="btn btn-primary">Button</button>
-                        <button type="button" class="btn btn-primary">Button</button>
-                        <button type="button" class="btn btn-primary">Button</button>
-                    </div>
+                <p class="bs-component">
+                <div class="btn-group-vertical" data-toggle="buttons">
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
                 </div>
+                </p>
 
-                <div class="bs-component" style="margin-bottom: 15px;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Left</button>
-                        <button type="button" class="btn btn-secondary">Middle</button>
-                        <button type="button" class="btn btn-secondary">Right</button>
-                    </div>
+                <p class="bs-component" style="margin-bottom: 15px;">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">Left</button>
+                    <button type="button" class="btn btn-secondary">Middle</button>
+                    <button type="button" class="btn btn-secondary">Right</button>
                 </div>
+                </p>
 
-                <div class="bs-component" style="margin-bottom: 15px;">
-                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-secondary">1</button>
-                            <button type="button" class="btn btn-secondary">2</button>
-                            <button type="button" class="btn btn-secondary">3</button>
-                            <button type="button" class="btn btn-secondary">4</button>
-                        </div>
-                        <div class="btn-group mr-2" role="group" aria-label="Second group">
-                            <button type="button" class="btn btn-secondary">5</button>
-                            <button type="button" class="btn btn-secondary">6</button>
-                            <button type="button" class="btn btn-secondary">7</button>
-                        </div>
-                        <div class="btn-group" role="group" aria-label="Third group">
-                            <button type="button" class="btn btn-secondary">8</button>
-                        </div>
+                <p class="bs-component" style="margin-bottom: 15px;">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary">2</button>
+                        <button type="button" class="btn btn-secondary">3</button>
+                        <button type="button" class="btn btn-secondary">4</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-secondary">5</button>
+                        <button type="button" class="btn btn-secondary">6</button>
+                        <button type="button" class="btn btn-secondary">7</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" class="btn btn-secondary">8</button>
                     </div>
                 </div>
+                </p>
 
             </div>
         </div>
@@ -1396,13 +1395,13 @@
             <div class="col-lg-6">
                 <h2>Modals</h2>
                 <div class="bs-component">
-                    <div class="modal">
+                    <div class="modal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Modal title</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
+                                        <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
@@ -1445,6 +1444,10 @@
                 </div>
                 <h2>Tooltips</h2>
                 <div class="bs-component">
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+                            title="Tooltip on top">
+                        Tooltip on top
+                    </button>
                     <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title=""
                             data-original-title="Tooltip on left">Left
                     </button>
@@ -1473,7 +1476,39 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
-                    <pre contenteditable=""></pre>
+                    <pre>
+                    <code class="language-html">
+                        &lt;nav class="navbar navbar-expand-lg">
+                            &lt;a class="navbar-brand" href="#">Navbar&lt;/a>
+                            &lt;button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarColor01"
+                                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                                &lt;span class="navbar-toggler-icon">&lt;/span>
+                            &lt;/button>
+
+                            &lt;div class="collapse navbar-collapse" id="navbarColor01">
+                                &lt;ul class="navbar-nav mr-auto">
+                                    &lt;li class="nav-item active">
+                                        &lt;a class="nav-link" href="#">Home &lt;span class="sr-only">(current)&lt;/span>&lt;/a>
+                                    &lt;/li>
+                                    &lt;li class="nav-item">
+                                        &lt;a class="nav-link" href="#">Features&lt;/a>
+                                    &lt;/li>
+                                    &lt;li class="nav-item">
+                                        &lt;a class="nav-link" href="#">Pricing&lt;/a>
+                                    &lt;/li>
+                                    &lt;li class="nav-item">
+                                        &lt;a class="nav-link" href="#">About&lt;/a>
+                                    &lt;/li>
+                                &lt;/ul>
+                                &lt;form class="form-inline my-2 my-lg-0">
+                                    &lt;input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                    &lt;button class="btn btn-secondary my-2 my-sm-0" type="submit">Search&lt;/button>
+                                &lt;/form>
+                            &lt;/div>
+                        &lt;/nav>
+                    </code>
+                    </pre>
                 </div>
             </div>
         </div>
@@ -1481,11 +1516,17 @@
 
 
 </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+<script src="vendors/prism.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+<script src="scripts/index.js"></script>
 
 </body>
 </html>
