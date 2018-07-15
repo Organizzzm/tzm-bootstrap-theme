@@ -1,13 +1,14 @@
-const el = document.getElementsByClassName('line')[0];
-let ypos, bottom, result;
+$('[data-toggle="tooltip"]').tooltip();
+$('[data-toggle="popover"]').popover();
 
-const paralax = () => {
-    ypos = window.pageYOffset;
-    bottom = el.style.bottom;
-    result = Math.pow(ypos, 1) - 200;
 
-    if(result >= 0) return;
-    el.style.bottom = result + 'px';
-};
+const modalBtn = document.createElement('div');
+modalBtn.className = 'modal-btn';
+modalBtn.setAttribute('data-toggle', "modal");
+modalBtn.setAttribute('data-target', "#source-modal");
 
-window.addEventListener('scroll', paralax);
+$('.tzm-component').append(modalBtn);
+
+$('#source-modal').on('shown.bs.modal', function () {
+    $('#source-modal').trigger('focus')
+});
