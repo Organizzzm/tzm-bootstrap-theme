@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = merge(commonConfig, {
     module: {
@@ -8,7 +8,7 @@ module.exports = merge(commonConfig, {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
                 ]
@@ -20,8 +20,13 @@ module.exports = merge(commonConfig, {
             }
         ]
     },
+    devtool: 'source-map',
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
-    devtool: 'source-map'
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
+    ]
 });

@@ -4,7 +4,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        library: './src/library/scripts/index.js'
+        library: './src/library/scripts/index.js',
+        theme: './src/theme/scripts/index.js'
     },
     output: {
         path: path.resolve(__dirname, '..', 'dist'),
@@ -21,7 +22,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/library/index.pug',
+            template: './src/library/index.html',
             filename: 'index.html'
         }),
         new WebpackCleanupPlugin('./dist', {})
