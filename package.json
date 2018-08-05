@@ -1,18 +1,18 @@
 {
   "name": "tzm-theme-kit",
   "version": "1.0.0",
-  "description": "A starter project to build your own Bootstrap 4 themes",
-  "repository": "https://github.com/HackerThemes/theme-kit",
-  "main": "index.js",
+  "description": "The zeitgeist movment theme based on Bootstrap 4",
+  "repository": "https://github.com/Organizzzm/tzm-bootstrap-theme",
   "scripts": {
     "serve": "NODE_ENV=dev webpack-dev-server --open --mode development",
-    "build:prod": "NODE_ENV=prod webpack --mode production"
+    "build": "NODE_ENV=prod webpack --mode production"
   },
   "keywords": [
+    "tzm",
     "bootstrap",
     "themes"
   ],
-  "author": "Alexander Rechsteiner",
+  "author": "Quantech",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.1.1",
