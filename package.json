@@ -1,12 +1,12 @@
 {
-  "name": "theme-kit",
+  "name": "tzm-theme-kit",
   "version": "1.0.0",
   "description": "A starter project to build your own Bootstrap 4 themes",
   "repository": "https://github.com/HackerThemes/theme-kit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node_modules/gulp/bin/gulp.js watch"
+    "serve": "NODE_ENV=dev webpack-dev-server --open --mode development",
+    "build:prod": "NODE_ENV=prod webpack --mode production"
   },
   "keywords": [
     "bootstrap",
@@ -21,13 +21,21 @@
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "autoprefixer": "^8.2.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.3",
-    "gulp-postcss": "^7.0.1",
-    "gulp-rename": "*",
-    "gulp-sass": "^4.0.1",
-    "gulp-scss-lint": "^0.6.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^4.0.0-alpha",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.3"
   }
 }
